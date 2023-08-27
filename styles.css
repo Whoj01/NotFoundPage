@@ -1,0 +1,124 @@
+/*Resets*/
+:root {
+	--color-gray-dark: #d5d5f2;
+	--color-gray-light: #D6D6F2;
+	--color-purple: #bf7bfb;
+	--color-blue: #151557;
+	--color-blue-light: #212187;
+	--color-dark-blue: #000013;
+
+  font-size: 62.5%;
+  font-family: 'Outfit', sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body, button {
+  font-size: 1.6rem;
+}
+
+/*Main Container*/
+
+.container {
+  min-height: 100vh;
+  max-width: 100vw;
+  height: 100%;
+  width: 100%;
+
+  background: url("assets/images/Background.png") no-repeat right center / cover ;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25.7rem;
+}
+
+/*Text info container*/
+
+.container .info {
+  display: flex;
+  flex-direction: column;
+  max-width: 38rem;
+  min-height: 35rem;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+.container .info .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.container .info .content h1 {
+  color: var(--color-gray-dark);
+  font-size: clamp(2rem, 4rem, 4.5rem);
+  font-weight: 700;
+}
+
+.container .info .content p {
+  color: #D6D6F2;
+  font-size: clamp(2rem, 2rem, 3rem);
+  font-weight: 300;
+  width: 100%;
+}
+
+.container .info .buttons {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 2.5rem;
+}
+
+.container .info .buttons > button{
+  color: var(--color-gray-light);
+  font-weight: 400;
+  padding: 1.5rem 2rem;
+  text-transform: uppercase;
+  background: var(--color-blue);
+  border: none;
+  border-radius: 99.2rem;
+  transition: background .5s;
+  cursor: pointer;
+}
+
+.container .info .buttons > button:hover {
+  background: var(--color-blue-light);
+}
+
+/*Error 404*/
+
+.container .errorContainer {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  max-width: 40.6rem;
+  width: 100%;
+}
+
+.container .errorContainer img {
+  max-height: 23rem;
+  max-width: 23rem;
+  min-height: 5rem;
+  min-width: 5rem;
+}
+
+@media(max-width: 1100px) {
+  .container {
+    padding: 0 4rem;
+    gap: 0;
+    flex-direction: column-reverse;
+  }
+
+  .container .info {
+    max-width: 45rem;
+  }
+}
